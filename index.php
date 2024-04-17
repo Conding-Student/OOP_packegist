@@ -3,7 +3,7 @@ require 'encapsulation.php'; // Added a semicolon here
 
 $sentimentAnalyzer = new SentimentsWithLibrary();
 
-$resulta = $sentimentAnalyzer->calculateSentiment("");
+$resulta = $sentimentAnalyzer->calculateSentiment("I am very Happy!!");
 
 
 
