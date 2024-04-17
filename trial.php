@@ -4,7 +4,7 @@ class Translator {
 
   private $translate;
 
-  public function importTranslate() {
+  public function __construct() {
     require "translator/vendor/autoload.php";
     $this->translate = new Stichoza\GoogleTranslate\GoogleTranslate();
   }

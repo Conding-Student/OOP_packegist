@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title></title>
+<title>Text Translator</title>
 </head>
 <body>
-  
+  <h1>Text Translator</h1>
   <form method="post">
-    
+    <label for="text">Text to Translate:</label><br>
     <textarea name="text" id="text" rows="5" cols="30"></textarea><br><br>
-    <label for="from"></label><br>
+    <label for="from">Source Language:</label><br>
     <select name="from" id="from">
       <?php
         require "trial.php"; // Include the Translator class
@@ -34,7 +34,7 @@
     $translator = new Translator();
     $translatedText = $translator->translateText($text, $to, $from);
 
-    
+    echo "<h3>Translation (to English):</h3>";
     echo "<p>$translatedText</p>";
   }
   ?>
