@@ -8,15 +8,22 @@ require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
 <html>
 <head>
 <title>Text Translator with Sentiment Analysis</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <h1>Text Translator with Sentiment Analysis</h1>
+
   <form method="post">
-    <label for="text">Text to Translate:</label><br>
-    <textarea name="text" id="text" rows="5" cols="30"></textarea><br><br>
-    <label for="from">Source Language:</label><br>
+
+    <label for="text" class="trans">Text to Translate:</label><br>
+
+    <textarea name="text" id="text" rows="5" cols="30"></textarea><br>
+
+    <label class="language" for="from">Source Language:</label><br>
+
     <select name="from" id="from" class="selected">
+
       <?php
         
         $languages = array(
@@ -29,9 +36,13 @@ require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
           echo "<option value='$code'>$name</option>";
         }
       ?>
+
     </select><br><br>
-    <input type="submit" value="Translate and Analyze">
+
+    <input type="submit" value="Translate and Analyze" class="analyze">
+
   </form>
+
   <?php
   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $text = $_POST['text'];
