@@ -6,7 +6,7 @@ use Sentiment\Analyzer; // Added to import the Analyzer class from the Sentiment
 
 // Concrete class implementing SentimentAnalysis using the Sentiment library
 class SentimentsWithLibrary extends SentimentAnalysis {
-    private $analyzer;
+    
 
     public function __construct() {
         $this->analyzer = new Analyzer();

@@ -10,7 +10,7 @@ $resulta = $sentimentAnalyzer->calculateSentiment("I am very Happy!!");
 $sentiment_result="";
 if ($resulta["compound"]>0.5)
 {
-    echo $sentiment="POSIIBO";
+    echo $sentiment="POSITIBO";
 }
 elseif($resulta["compound"] < -0.05)
 {
