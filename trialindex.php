@@ -13,6 +13,7 @@
       <?php
         require "trial.php"; // Include the Translator class
         $languages = array(
+          'en' => 'English',
           'fil' => 'Filipino',
           'de' => 'German',
           // Add more languages as needed
