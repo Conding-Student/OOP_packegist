@@ -1,8 +1,15 @@
 <?php
 
-require "translator/vendor/autoload.php";
+class Translator {
 
-use Stichoza\GoogleTranslate\GoogleTranslate;
+  private $translate;
 
-echo GoogleTranslate::trans('Mahal kita', 'en', 'fil'); // Filipino to english
-echo GoogleTranslate::trans('Ich liebe meine oma', 'en', 'de'); // German to English
+  public function importTranslate() {
+    require "translator/vendor/autoload.php";
+    $this->translate = new Stichoza\GoogleTranslate\GoogleTranslate();
+  }
+
+  public function translateText($text, $from, $to) {
+    return $this->translate->trans($text, $from, $to);
+  }
+}
