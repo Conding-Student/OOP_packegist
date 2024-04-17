@@ -1,0 +1,69 @@
+<?php
+require 'encapsulation.php'; // Added a semicolon here
+
+$sentimentAnalyzer = new SentimentsWithLibrary();
+
+$resulta = $sentimentAnalyzer->calculateSentiment("I am very sad!!");
+
+
+
+$sentiment_result="";
+if ($resulta["compound"]>0.5)
+{
+    echo $sentiment="POSITIBO";
+}
+elseif($resulta["compound"] < -0.05)
+{
+    echo $sentiment_result = "NEGATIBO";
+}
+else{
+    echo $sentiment_result = "TABLADO";
+}
+?>
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Sentiment Analyzer</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/4a85ec1aea.js" crossorigin="anonymous"></script>
+
+    
+    </head>
+    
+    <body>
+
+        <section class="first">
+
+            <div class="wrapper">
+
+                <form action="">  
+                    
+                    <div class="emoji">
+                        <i class="fas fa-smile"></i>
+                        <i class="fas fa-frown"></i>
+                        <i class="fas fa-meh"></i>
+                    </div>
+
+                    <input type="text" name="text" id="text">
+
+                    <div class="type-of-emoji">
+                        <p class="bad">Bad</p>
+                        <p class="good">Good</p>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        
+    </body>
+
+</html>
