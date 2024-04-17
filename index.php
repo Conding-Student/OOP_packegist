@@ -3,22 +3,24 @@ require 'encapsulation.php'; // Added a semicolon here
 
 $sentimentAnalyzer = new SentimentsWithLibrary();
 
-$resulta = $sentimentAnalyzer->calculateSentiment("I am very angry!!");
-
-
+$resulta = $sentimentAnalyzer->calculateSentiment("I am a little glad");
 
 $sentiment_result="";
-if ($resulta["compound"]>0.5)
-{
-    echo $sentiment="POSITIBO";
+$sentiment_score = $resulta["compound"];
+
+if ($sentiment_score > 0.5) {
+    $sentiment_result = "POSITIVE";
+} elseif ($sentiment_score > 0.2) {
+    $sentiment_result = "SLIGHTLY POSITIVE";
+} elseif ($sentiment_score < -0.05) {
+    $sentiment_result = "NEGATIVE";
+} elseif ($sentiment_score < -0.2) {
+    $sentiment_result = "SLIGHTLY NEGATIVE";
+} else {
+    $sentiment_result = "NEUTRAL";
 }
-elseif($resulta["compound"] < -0.05)
-{
-    echo $sentiment_result = "NEGATIBO";
-}
-else{
-    echo $sentiment_result = "TABLADO";
-}
+
+echo $sentiment_result;
 ?>
 <!DOCTYPE html>
 <html lang="en">
