@@ -1,3 +1,9 @@
+<?php
+require "trial.php"; // Include the Translator class
+require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +17,7 @@
     <label for="from">Source Language:</label><br>
     <select name="from" id="from">
       <?php
-        require "trial.php"; // Include the Translator class
+        
         $languages = array(
           'en' => 'English',
           'fil' => 'Filipino',
@@ -35,7 +41,7 @@
     $translatedText = $translator->translateText($text, $to, $from);
 
     // Sentiment Analysis on translated text
-    require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
+    
     $sentimentAnalyzer = new SentimentsWithLibrary();
     $sentimentResult = $sentimentAnalyzer->calculateSentiment($translatedText);
     $sentiment_score = $sentimentResult["compound"];
