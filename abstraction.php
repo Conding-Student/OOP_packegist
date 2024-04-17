@@ -1,6 +1,6 @@
 <?php
 
-require "vendor/autoload.php";
+require "sentiments/vendor/autoload.php";
 
 // Abstract class defining a sentiment analysis
 abstract class SentimentAnalysis {
