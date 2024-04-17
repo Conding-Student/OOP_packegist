@@ -15,7 +15,7 @@ require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
     <label for="text">Text to Translate:</label><br>
     <textarea name="text" id="text" rows="5" cols="30"></textarea><br><br>
     <label for="from">Source Language:</label><br>
-    <select name="from" id="from">
+    <select name="from" id="from" class="selected">
       <?php
         
         $languages = array(
@@ -45,6 +45,9 @@ require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
     $sentimentAnalyzer = new SentimentsWithLibrary();
     $sentimentResult = $sentimentAnalyzer->calculateSentiment($translatedText);
     $sentiment_score = $sentimentResult["compound"];
+
+    echo "<h3>Your input:</h3>";
+    echo "<p>$text</p>";
 
     echo "<h3>Translation (to English):</h3>";
     echo "<p>$translatedText</p>";
