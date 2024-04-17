@@ -8,7 +8,7 @@ require 'encapsulation.php'; // Include sentiment analysis proceseaweasdas
 <html>
 <head>
 <title>Text Translator with Sentiment Analysis</title>
-
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Text Translator with Sentiment Analysis</h1>
