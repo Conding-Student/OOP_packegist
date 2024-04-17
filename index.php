@@ -1,13 +1,24 @@
 <?php
 require 'encapsulation.php'; // Added a semicolon here
 
-
-
 $sentimentAnalyzer = new SentimentsWithLibrary();
 
-$output_text_with_emoji = $sentimentAnalyzer->calculateSentiment("");
+$resulta = $sentimentAnalyzer->calculateSentiment("");
 
-print_r($output_text_with_emoji);
+
+
+$sentiment_result="";
+if ($resulta["compound"]>0.5)
+{
+    echo $sentiment="POSIIBO";
+}
+elseif($resulta["compound"] < -0.05)
+{
+    echo $sentiment_result = "NEGATIBO";
+}
+else{
+    echo $sentiment_result = "TABLADO";
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
