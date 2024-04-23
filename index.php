@@ -1,6 +1,5 @@
 <?php
-  require "Classes/sentiments.php"; // Include the process for sentiment analysis
-  require 'Classes/translator.php'; // Include the process for language tranlator 
+  require 'Classes/S.A.L.T.php'; // Process for Sentiment Analysis Launguage Translator Tool
 ?>
 
 <?php
@@ -16,12 +15,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Text Translator with Sentiment Analysis</title>
+  <title>Sentiment Analysis Language Translator Tool</title>
   <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
 
-  <h1>Text Translator with Sentiment Analysis</h1>
+  <h1>Sentiment Analysis Language Translator Tool</h1>
 
   <form method="post">
 
